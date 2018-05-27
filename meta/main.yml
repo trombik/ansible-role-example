@@ -8,20 +8,19 @@ galaxy_info:
   platforms:
   - name: FreeBSD
     versions:
-    - 11.1
-#  - name: OpenBSD
-#    versions:
-#    - 6.0
-#    - 6.1
-#  - name: Ubuntu
-#    versions:
-#    - trusty
-#    - xenial
-#  - name: EL
-#    versions:
-#    - 7
+      #-10.4
+      - 11.1
+  - name: OpenBSD
+    versions:
+      - 6.3
+  - name: Ubuntu
+    versions:
+      - bionic
+  - name: EL
+    versions:
+      - 7
 
   galaxy_tags:
-    - system
+    - example
 #dependencies:
 #  - foo.role

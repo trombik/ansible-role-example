@@ -1,6 +1,6 @@
 ---
 
 - name: Install example_package
-  pkgng:
+  apt:
     name: "{{ example_package }}"
     state: present

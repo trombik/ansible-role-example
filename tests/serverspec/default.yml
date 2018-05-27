@@ -2,4 +2,3 @@
   roles:
     - ansible-role-example
   vars:
-    example_config: ""
