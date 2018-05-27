@@ -1,6 +1,6 @@
 # ansible-role-example
 
-A role as an example.
+A role as an example. See documentations under [docs](docs).
 
 # Requirements
 
