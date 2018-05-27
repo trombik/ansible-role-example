@@ -1,6 +1,6 @@
 ---
 
 - name: Install example_package
-  pkgng:
+  openbsd_pkg:
     name: "{{ example_package }}"
     state: present

@@ -1,6 +1,6 @@
 # ansible-role-example
 
-A brief description of the role goes here.
+A role as an example.
 
 # Requirements
 
@@ -8,9 +8,34 @@ None
 
 # Role Variables
 
-| variable | description | default |
+| Variable | Description | Default |
 |----------|-------------|---------|
+| `example_package` | | `{{ __example_package }}` |
 
+
+## Debian
+
+| Variable | Default |
+|----------|---------|
+| `__example_package` | `zsh` |
+
+## FreeBSD
+
+| Variable | Default |
+|----------|---------|
+| `__example_package` | `zsh` |
+
+## OpenBSD
+
+| Variable | Default |
+|----------|---------|
+| `__example_package` | `zsh` |
+
+## RedHat
+
+| Variable | Default |
+|----------|---------|
+| `__example_package` | `zsh` |
 
 # Dependencies
 
@@ -19,6 +44,10 @@ None
 # Example Playbook
 
 ```yaml
+- hosts: localhost
+  roles:
+    - ansible-role-example
+  vars:
 ```
 
 # License
