@@ -1,0 +1,6 @@
+---
+
+- name: Install example
+  pkgng:
+    name: example
+    state: present

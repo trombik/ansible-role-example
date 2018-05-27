@@ -1,0 +1,37 @@
+---
+# tasks file for ansible-role-example
+
+- include_vars: "{{ ansible_os_family }}.yml"
+
+- include: "install-{{ ansible_os_family }}.yml"
+
+- name: Create log directory
+  file:
+    path: "{{ example_log_dir }}"
+    mode: 0755
+    owner: "{{ example_user }}"
+    group: "{{ example_group }}"
+    state: directory
+  notify: Restart example
+
+- name: Create db directory
+  file:
+    path: "{{ example_db_dir }}"
+    mode: 0755
+    owner: "{{ example_user }}"
+    group: "{{ example_group }}"
+    state: directory
+  notify: Restart example
+
+- name: Create example.conf
+  template:
+    src: example.conf.j2
+    dest: "{{ example_conf_file }}"
+    validate: echo %s
+  notify: Restart example
+
+- name: Start example
+  service:
+    name: "{{ example_service }}"
+    enabled: true
+    state: started
